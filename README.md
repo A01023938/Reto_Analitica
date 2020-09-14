@@ -1,5 +1,5 @@
 # Semana Tec 1
-** Integrantes ** 
+**Integrantes** 
 - Mateo Gonzalez Cosio
 - Jose Salgado 
 - Caro Ortega
