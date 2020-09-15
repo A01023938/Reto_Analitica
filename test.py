@@ -1,3 +1,2 @@
-set = input("Pon tu nombre\n")
+import numpy as np
 
-print("Tu nombre es: ", set)
