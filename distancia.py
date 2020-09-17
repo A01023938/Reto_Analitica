@@ -1,3 +1,7 @@
+import numpy as np
+
+# 1
+
 list1 = [1,2,3,4,5]
 list2 = [5,4,3,2,1]
 
@@ -10,4 +14,29 @@ def distance(list1, list2):
 
     return d_squared**(1/2)
 
-print(distance(list1, list2))
+# 2
+
+puntos = [[2,2], [4,4], [14,14], [16,16]]
+centros = [[3,3], [15,15]]
+
+def centre(puntos, centros):
+    # Puntos es un lista de puntos (x,y)
+    # Centro es una lista de k listas (x,y)
+
+    clusters = [[] for _ in range(0, len(centros))]
+
+    for i, punto in enumerate(puntos):
+        # Tengo un punto que lo quiero comparar contra todos los centros
+        # Aqui se van a guardar todas las distancias entre mi punto y todos los centros
+        p_vs_c = []
+        for i, centro in enumerate(centros):
+            d = distance(centro, punto)
+            p_vs_c.append(d)
+        # la minima distancia entre mi punto y todos los centros es el la key del centro correcto
+        pos = p_vs_c.index(min(p_vs_c)) # La posicion del centro en clusters
+        clusters[pos].append(punto)
+
+    return clusters
+   
+        
+print(centre(puntos, centros))
