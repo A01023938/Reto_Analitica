@@ -16,27 +16,31 @@ def distance(list1, list2):
 
 # 2
 
-puntos = [[2,2], [4,4], [14,14], [16,16]]
+puntos = [[2,2], [4,4], [5,5], [14,14], [16,16]]
 centros = [[3,3], [15,15]]
 
-def centre(puntos, centros):
-    # Puntos es un lista de puntos (x,y)
-    # Centro es una lista de k listas (x,y)
-
+def cercanos(puntos, centros):
     clusters = [[] for _ in range(0, len(centros))]
-
     for i, punto in enumerate(puntos):
-        # Tengo un punto que lo quiero comparar contra todos los centros
-        # Aqui se van a guardar todas las distancias entre mi punto y todos los centros
         p_vs_c = []
         for i, centro in enumerate(centros):
             d = distance(centro, punto)
             p_vs_c.append(d)
-        # la minima distancia entre mi punto y todos los centros es el la key del centro correcto
-        pos = p_vs_c.index(min(p_vs_c)) # La posicion del centro en clusters
+        pos = p_vs_c.index(min(p_vs_c))
         clusters[pos].append(punto)
 
     return clusters
    
         
-print(centre(puntos, centros))
+# 3
+
+def centers(clusters):
+    new_centers = []
+    for cluster in clusters:
+        c = [sum(x) for x in zip(*cluster)]
+        for i, _ in enumerate(c):
+            c[i] /= len(cluster)
+        new_centers.append(c)
+    return new_centers
+
+print(centers(cercanos(puntos, centros)))
