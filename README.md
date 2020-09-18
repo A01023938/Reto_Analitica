@@ -5,9 +5,13 @@ Semana Tec TC1002S
 - Caro Ortega - A01025254
 - Rodrigo Aviles - A01023707
 
+En este reto implementamos el algoritmo de clustering para k-means en Python. Mediante un repositorio compartido en GitHub pudimos trabajar de forma remota.  
+
 ¿Crees que estos centros puedan ser representativos de los datos? ¿Por qué?
 
+
 ¿Cómo obtuviste el valor de k a usar?
+K lo tomamos como la lista dentro de puntos?
 
 ¿Los centros serían más representativos si usaras un valor más alto? ¿Más bajo?
 
