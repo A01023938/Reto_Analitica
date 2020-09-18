@@ -17,10 +17,6 @@ if __name__ == "__main__":
 
     kmeans = KMeans(n_clusters=3).fit(X)
 
-    print('Label')
-    print(kmeans.labels_)
-    print('')
-    print(kmeans.cluster_centers_)
-
     plt.scatter(X[:,0],X[:,1], c=kmeans.labels_, cmap='rainbow')
+    plt.scatter(kmeans.cluster_centers_[:,0],kmeans.cluster_centers_[:,1], c='black', cmap='rainbow', marker='x')
     plt.show()

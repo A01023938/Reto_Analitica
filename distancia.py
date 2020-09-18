@@ -3,13 +3,14 @@ import numpy as np
 # 1
 
 def distance(list1, list2):
-    if len(list1) != len(list2):
-        return -1
-    d_squared = 0
-    for v1, v2 in zip(list1, list2):
-        d_squared += (v2 - v1)**2
+    # if len(list1) != len(list2):
+    #     return -1
+    # d_squared = 0
+    # for v1, v2 in zip(list1, list2):
+    #     d_squared += (v2 - v1)**2
 
-    return d_squared**(1/2)
+    # return d_squared**(1/2)
+    return np.sqrt(np.sum((np.array(list2)-np.array(list1))**2))
 
 # 2
 
@@ -44,12 +45,3 @@ def center(cluster):
             cluster_f.append(avg.tolist())
     return cluster_f
     
-
-puntos = [(32,34),(2,1),(9,7)]
-centros = [[3,3], [15,15]]
-
-values = get_clusters(puntos, centros)
-print("Clusters: ", values)
-
-average = center(values)
-print("Average of cluster values for new centers: ", average)
