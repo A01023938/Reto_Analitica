@@ -41,7 +41,7 @@ def center(cluster):
     return cluster_f
     
 
-def k_means(puntos,k, times):
+def k_means(puntos, times):
     cx = int(input("How many centers would you like to generate?:"))
     centros = []
     for i in range(cx+1):
@@ -64,9 +64,10 @@ if __name__ == "__main__":
     
     cx = int(input("How many coordinates would you like to generate?:"))
     puntos = []
+    ci = int(input("How many times would you like the centers to be readjusted?: "))
     for i in range(cx+1):
         n = ((random.randint(1,15),(random.randint(1,50))))
         puntos.append(n)
-    print(k_means(puntos,2,5))
+    print(k_means(puntos,ci))
 
     
