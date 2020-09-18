@@ -1,4 +1,4 @@
-# Semana Tec TC1002S
+# Semana Tec TC1002S.2
 ***Integrantes***
 - Mateo Gonzalez Cosio - A01023938
 - Jose Salgado - A01023661
@@ -6,6 +6,7 @@
 - Rodrigo Aviles - A01023707
 
 En este reto implementamos el algoritmo de clustering k-means en Python. Mediante un repositorio compartido en GitHub pudimos trabajar de forma remota.  
+
 
 ¿Crees que estos centros puedan ser representativos de los datos? ¿Por qué?
 
