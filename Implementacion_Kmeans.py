@@ -41,7 +41,7 @@ def center(cluster):
         cluster_f = []
         for i in range(len(cluster)):
             avg = np.mean(cluster[i], axis=0)
-            avgr = np.round(avg,0)
+            avgr = avg.astype(int)
             cluster_f.append(avgr.tolist())
     print(cluster_f)
     
