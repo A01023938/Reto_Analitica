@@ -1,5 +1,4 @@
 import numpy as np
-import statistics as st
 
 # 1
 
@@ -35,6 +34,8 @@ def centre(puntos, centros):
         clusters[pos].append(punto)
 
     return clusters
+
+# 3
 
 def center(cluster):
     for i in cluster:
