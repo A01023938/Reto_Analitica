@@ -16,7 +16,7 @@ def distance(list1, list2):
 # 2
 
 
-def centre(puntos, centros):
+def get_clusters(puntos, centros):
     # Puntos es un lista de puntos (x,y)
     # Centro es una lista de k listas (x,y)
 
@@ -63,20 +63,11 @@ puntos = zip(list_x,list_y)
 #print(tuple(puntos))
 centros = [[3,3], [15,15]]
 
-values = centre(tuple(puntos), centros)
+values = get_clusters(tuple(puntos), centros)
 print("Clusters: ", values)
 
 average = center(values)
 print("Average of cluster values for new centers: ", average)
 
 
-
-
-
-
-
-
-
-
-
-
+print(get_clusters(tuple(puntos), average))
