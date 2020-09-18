@@ -22,7 +22,7 @@ def get_clusters(puntos, centros):
 
     clusters = [[] for _ in range(0, len(centros))]
 
-    for i, punto in enumerate(puntos):
+    for punto in puntos:
         # Tengo un punto que lo quiero comparar contra todos los centros
         # Aqui se van a guardar todas las distancias entre mi punto y todos los centros
         p_vs_c = []
@@ -42,32 +42,18 @@ def center(cluster):
         cluster_f = []
         for i in range(len(cluster)):
             avg = np.mean(cluster[i], axis=0)
-            avgr = avg.astype(int)
-            cluster_f.append(avgr.tolist())
+            #avgr = avg.astype(int) Turns list to ints
+            cluster_f.append(avg.tolist())
     return cluster_f
     
 
-list_x = []
-list_y = []
-num = int(input("Please input the size of the lists: "))
-c1 = 0
-
-while c1 < num:
-    x = int(input(f"Input x {c1} value: "))
-    y = int(input(f"Input y {c1} value: "))
-    list_x.append(x)
-    list_y.append(y)
-    c1 = c1+1
-
-puntos = zip(list_x,list_y)
-#print(tuple(puntos))
+puntos = [(32,34),(2,1),(9,7)]
 centros = [[3,3], [15,15]]
 
-values = get_clusters(tuple(puntos), centros)
+values = get_clusters(puntos, centros)
 print("Clusters: ", values)
 
 average = center(values)
 print("Average of cluster values for new centers: ", average)
 
-
-print(get_clusters(tuple(puntos), average))
+print(get_clusters(puntos, average))
