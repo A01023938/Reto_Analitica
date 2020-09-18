@@ -1,5 +1,5 @@
-Semana Tec TC1002S
-**Integrantes**
+#Semana Tec TC1002S
+Integrantes
 - Mateo Gonzalez Cosio - A01023938
 - Jose Salgado - A01023661
 - Caro Ortega - A01025254
