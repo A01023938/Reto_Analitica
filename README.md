@@ -7,7 +7,7 @@
 
 En este reto implementamos el algoritmo de clustering k-means en Python. Mediante un repositorio compartido en GitHub pudimos trabajar de forma remota.  
 
-#Funcionamiento del código
+# Funcionamiento del código
 
 Nuestro código empieza con una función de distancia en la cual se reciben dos listas y la función regresa el valor de la distancia euclidiana entre ellas. Al empezar a programar esta parte , primero optamos por que las listas fueran puestas por el usuario pero el problema fue que había casos en los que el programa copiaba listas y las sustituía en otro lugar. Optamos por quitar estos inputs y mejor usar datos directos.
 
@@ -17,9 +17,15 @@ Nuestro código empieza con una función de distancia en la cual se reciben dos 
 
 Usamos una función get_clusters que utiliza los puntos como una lista de (x,y) y el centro que queremos obtener será una lista de k listas (x,y).  Cada punto se compara con todos los centros y se guarda la distancia entre ellos. Se utiliza un for para que a la lista vacía se le agregue la información de los puntos donde están los centros. Los puntos seleccionados serán los que están más cerca de los centros.
 
+    clusters[pos].append(punto)
+    
 La función center recibe la lista de k listas denominada como cluster. Con esta función queremos obtener los puntos donde estarán los nuevos centros , después de calcular el promedio se agrega a la lista.
 
+    cluster_f.append(avg.tolist())
+
 La función k_means genera todos los puntos , los centros y los clusters de manera aleatoria de puntos que esté en las coordenadas que quieras generar.
+
+
 
 
 ¿Crees que estos centros puedan ser representativos de los datos? ¿Por qué?
