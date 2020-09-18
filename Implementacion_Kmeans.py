@@ -44,7 +44,7 @@ def center(cluster):
             avg = np.mean(cluster[i], axis=0)
             avgr = avg.astype(int)
             cluster_f.append(avgr.tolist())
-    print(cluster_f)
+    return cluster_f
     
 
 list_x = []
@@ -64,9 +64,10 @@ puntos = zip(list_x,list_y)
 centros = [[3,3], [15,15]]
 
 values = centre(tuple(puntos), centros)
-print(values)
+print("Clusters: ", values)
 
-center(values)
+average = center(values)
+print("Average of cluster values for new centers: ", average)
 
 
 
