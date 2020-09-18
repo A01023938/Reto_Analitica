@@ -15,9 +15,15 @@ En este reto implementamos el algoritmo de clustering k-means en Python. Mediant
 K lo tomamos como la lista dentro de puntos?
 
 ¿Los centros serían más representativos si usaras un valor más alto? ¿Más bajo?
+El valor no tiene mucha importancia 
 
 ¿Qué distancia tienen los centros entre sí? ¿Hay alguno que este muy cercano a otros?
 
+
 ¿Qué pasaría con los centros si tuviéramos muchos outliers en el análisis de cajas y bigotes?
 
+
 ¿Qué puedes decir de los datos basándose en los centros?
+
+## Gráficas 
+
