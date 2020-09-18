@@ -2,8 +2,6 @@ import numpy as np
 
 # 1
 
-
-
 def distance(list1, list2):
     if len(list1) != len(list2):
         return -1
@@ -26,7 +24,7 @@ def get_clusters(puntos, centros):
         # Tengo un punto que lo quiero comparar contra todos los centros
         # Aqui se van a guardar todas las distancias entre mi punto y todos los centros
         p_vs_c = []
-        for i, centro in enumerate(centros):
+        for centro in centros:
             d = distance(centro, punto)
             p_vs_c.append(d)
         # la minima distancia entre mi punto y todos los centros es el la key del centro correcto
@@ -55,5 +53,3 @@ print("Clusters: ", values)
 
 average = center(values)
 print("Average of cluster values for new centers: ", average)
-
-print(get_clusters(puntos, average))
