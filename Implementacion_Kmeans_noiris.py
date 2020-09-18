@@ -1,15 +1,11 @@
 import numpy as np
+import random
 
 # 1
 
-def distance(list1, list2):
-    if len(list1) != len(list2):
-        return -1
-    d_squared = 0
-    for v1, v2 in zip(list1, list2):
-        d_squared += (v2 - v1)**2
-
-    return d_squared**(1/2)
+def distance(a, b):
+    return np.sqrt(np.sum((np.array(b)-np.array(a))**2))
+    
 
 # 2
 
@@ -45,23 +41,32 @@ def center(cluster):
     return cluster_f
     
 
-def k_means(puntos, times):
-    centros = [[3,3], [15,15]]
+def k_means(puntos,k, times):
+    cx = int(input("How many centers would you like to generate?:"))
+    centros = []
+    for i in range(cx+1):
+        n = ((random.randint(1,15),(random.randint(1,50))))
+        centros.append(n)
+    #centros = [[2,3],[32,29]]
     clusters = get_clusters(puntos,centros)
 
     for i in range(times):
         clusters = get_clusters(puntos,centros)
         centros = center(clusters)
     print("Clusters: ", clusters)
+    print("Centros: ", centros)
     print("Puntos: ", puntos)
 
 
 
 if __name__ == "__main__":
     
-    k = 3
-
-    puntos = [(32,34),(2,1),(9,7)]
-    print(k_means(puntos,5))
+    
+    cx = int(input("How many coordinates would you like to generate?:"))
+    puntos = []
+    for i in range(cx+1):
+        n = ((random.randint(1,15),(random.randint(1,50))))
+        puntos.append(n)
+    print(k_means(puntos,2,5))
 
     
