@@ -45,5 +45,5 @@ El valor de los centros no tiene una repercusión importante en el funcionamient
 
 
 ## Gráficas 
-Se grafican los puntos y los centros para una mejor visualización de los datos.
+Se grafican los puntos y los centros para una mejor visualización de los datos utilizando la librería matplot.lib. 
 
