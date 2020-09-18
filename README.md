@@ -18,12 +18,14 @@ Usamos una función get_clusters que utiliza los puntos como una lista de (x,y) 
 
     clusters[pos].append(punto)
     
-La función center recibe la lista de k listas denominada como cluster. Con esta función queremos obtener los puntos donde estarán los nuevos centros , después de calcular el promedio se agrega a la lista.
+La función center recibe la lista de k listas denominada como cluster. Con esta función queremos obtener los puntos donde estarán los nuevos centros , después de calcular el promedio se agrega a la nueva lista.
 
     cluster_f.append(avg.tolist())
     
 Al implementar k_means se llegó a implementar de manera manual con random y con iris.
-La función k_means con random genera todos los puntos , los centros y los clusters de manera aleatoria de puntos que estén en las coordenadas que quieras generar. El usuario selecciona el número de coordenadas a generar , las veces que desea reajustar los centros y el número de centros que quiere obtener.
+La función k_means con random genera todos los puntos , los centros y los clusters de manera aleatoria de puntos que estén en las coordenadas que se quieran generar. El usuario selecciona el número de coordenadas a generar , las veces que desea reajustar los centros (iteraciones) y el número de centros que quiere obtener.
+
+
 
 
 
@@ -43,4 +45,5 @@ El valor de los centros no tiene una repercusión importante en el funcionamient
 
 
 ## Gráficas 
+Se grafican los puntos y los centros para una mejor visualización de los datos.
 
