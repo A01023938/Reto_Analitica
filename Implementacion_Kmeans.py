@@ -45,11 +45,23 @@ def center(cluster):
     return cluster_f
     
 
-puntos = [(32,34),(2,1),(9,7)]
-centros = [[3,3], [15,15]]
+def k_means(puntos, times):
+    centros = [[3,3], [15,15]]
+    clusters = get_clusters(puntos,centros)
 
-values = get_clusters(puntos, centros)
-print("Clusters: ", values)
+    for i in range(times):
+        clusters = get_clusters(puntos,centros)
+        centros = center(clusters)
+    print("Clusters: ", clusters)
+    print("Puntos: ", puntos)
 
-average = center(values)
-print("Average of cluster values for new centers: ", average)
+
+
+if __name__ == "__main__":
+    
+    k = 3
+
+    puntos = [(32,34),(2,1),(9,7)]
+    print(k_means(puntos,5))
+
+    
