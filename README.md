@@ -37,12 +37,7 @@ El valor de los centros no tiene una repercusión importante en el funcionamient
 
 En todos los casos cada vez que hay una iteración los números son siempre diferentes y aunque pasen por los mismos métodos y funciones esto siempre va a pasar. Por esta razón en los resultados finales nuestros centros tienen diferentes distancias , la distancia de nuestros centros es de 12.31 , los centros más cercanos son el 2 y 3 y los más lejanos el 3 y el 1.
 
-
-¿Qué pasaría con los centros si tuviéramos muchos outliers en el análisis de cajas y bigotes?
-
-
-¿Qué puedes decir de los datos basándose en los centros?
-
+Los centros que se muestran en las gráficas como resultado final se calculan gracias al conjunto de datos ya analizados podemos decir que por eso para llegar a ellos es indispensable primero calcular todas las funciones con sus respectivos datos y métodos.
 
 ## Gráfica
 Se grafican los puntos y los centros para una mejor visualización de los datos utilizando la librería matplot.lib. 
