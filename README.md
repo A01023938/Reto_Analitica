@@ -12,15 +12,56 @@ El código se implementa con el data de iris que se descargó de internet.
 
 Nuestro código empieza con una función de distancia en la cual se reciben dos listas y la función regresa el valor de la distancia euclidiana entre ellas. Al empezar a programar esta parte , primero optamos por que las listas fueran puestas por el usuario pero el problema fue que había casos en los que el programa copiaba listas y las sustituía en otro lugar. Optamos por quitar estos inputs y mejor usar datos directos.
 
+```python
+def distance(list1, list2):
+    if len(list1) != len(list2):
+        return -1
+    d_squared = 0
+    for v1, v2 in zip(list1, list2):
+        d_squared += (v2 - v1)**2
+
     return d_squared**(1/2)
+
+```
 
 Usamos una función get_clusters que utiliza los puntos como una lista de (x,y) y el centro que queremos obtener será una lista de k listas (x,y).  Cada punto se compara con todos los centros y se guarda la distancia entre ellos. Se utiliza un for para que a la lista vacía se le agregue la información de los puntos donde están los centros. Los puntos seleccionados serán los que están más cerca de los centros.
 
-    clusters[pos].append(punto)
+```python
+
+def get_clusters(puntos, centros):
+    # Puntos es un lista de puntos (x,y)
+    # Centro es una lista de k listas (x,y)
+
+    clusters = [[] for _ in range(0, len(centros))]
+
+    for punto in puntos:
+        # Tengo un punto que lo quiero comparar contra todos los centros
+        # Aqui se van a guardar todas las distancias entre mi punto y todos los centros
+        p_vs_c = []
+        for centro in centros:
+            d = distance(centro, punto)
+            p_vs_c.append(d)
+        # la minima distancia entre mi punto y todos los centros es el la key del centro correcto
+        pos = p_vs_c.index(min(p_vs_c)) # La posicion del centro en clusters
+        clusters[pos].append(punto)
+
+    return clusters
+```
     
 La función center recibe la lista de k listas denominada como cluster. Con esta función queremos obtener los puntos donde estarán los nuevos centros , después de calcular el promedio se agrega a la nueva lista.
 
-    cluster_f.append(avg.tolist())
+```python
+
+def center(cluster):
+    for i in cluster:
+        cluster_f = []
+        for i in range(len(cluster)):
+            avg = np.mean(cluster[i], axis=0)
+            #avgr = avg.astype(int) Turns list to ints
+            cluster_f.append(avg.tolist())
+    return cluster_f
+    
+```
     
 Al implementar k_means se llegó a implementar de manera manual con random y con iris.
 La función k_means con random genera todos los puntos , los centros y los clusters de manera aleatoria de puntos que estén en las coordenadas que se quieran generar. El usuario selecciona el número de coordenadas a generar , las veces que desea reajustar los centros (iteraciones) y el número de centros que quiere obtener.
