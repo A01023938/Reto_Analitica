@@ -55,7 +55,7 @@ Se grafican los puntos y los centros para una mejor visualización de los datos 
 
 Con las funciones propuestas anteriormente procesamos la informacion encontrada en el set the data "iris" y obtuvimos la siguiente grafica.
 
-![Basic Graph](Images\Graph_basic.png)
+![](images/Graph_basic.png)
 
 ## Scikit Learn
 Para asegurar que la clasificación de nuestros datos sea la correcta nos dimos la tarea de utilizar la libreria **scikit-learn** para clasificar nuestos datos.
