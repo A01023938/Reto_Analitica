@@ -35,7 +35,7 @@ El valor de k lo tomamos como el número de clusters que obtuvimos, k se impleme
 
 El valor de los centros no tiene una repercusión importante en el funcionamiento de las variables y funciones ya que si es más alto o más bajo lo único que hace el centro es tomar esos valores y para definir nuevos puntos y centros sin importar su signo.
 
-¿Qué distancia tienen los centros entre sí? ¿Hay alguno que este muy cercano a otros?
+En todos los casos cada vez que hay una iteración los números son siempre diferentes y aunque pasen por los mismos métodos y funciones esto siempre va a pasar. Por esta razón en los resultados finales nuestros centros tienen diferentes distancias , la distancia de nuestros centros es de 12.31 , los centros más cercanos son el 2 y 3 y los más lejanos el 3 y el 1.
 
 
 ¿Qué pasaría con los centros si tuviéramos muchos outliers en el análisis de cajas y bigotes?
