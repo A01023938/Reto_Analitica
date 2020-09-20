@@ -53,15 +53,15 @@ Se grafican los puntos y los centros para una mejor visualización de los datos 
 
 ## Nuestra implementación
 
-Con las funciones propuestas anteriormente procesamos la informacion encontrada en el set the data "iris" y obtuvimos la siguiente grafica.
+Con las funciones propuestas anteriormente procesamos la información encontrada en el set the data "iris" y obtuvimos la siguiente gráfica.
 
 ![Graph_basic](https://user-images.githubusercontent.com/71286113/93691943-08fad380-fab2-11ea-8314-730e8000eeea.png)
 
 ## Scikit Learn
-Para asegurar que la clasificación de nuestros datos sea la correcta nos dimos la tarea de utilizar la libreria **scikit-learn** para clasificar nuestos datos.
+Para asegurar que la clasificación de nuestros datos sea la correcta nos dimos la tarea de utilizar la librería **scikit-learn** para clasificar nuestos datos.
 
-Al igual utilizamos el metodo Kmeans para clasificar nuestros datos en 3 grupos.
+Al igual utilizamos el método k-means para clasificar nuestros datos en 3 grupos.
 
-Estas fueron la grafica resultante:
+Esta fue la gráfica resultante:
 
 ![Graph_sklearn](https://user-images.githubusercontent.com/71286113/93691951-3e9fbc80-fab2-11ea-9993-c1b73c4cc117.png)
