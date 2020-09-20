@@ -64,4 +64,4 @@ Al igual utilizamos el metodo Kmeans para clasificar nuestros datos en 3 grupos.
 
 Estas fueron la grafica resultante:
 
-![Scikit Learn Graph](Images\Graph_sklearn.png)
+![Graph_sklearn](https://user-images.githubusercontent.com/71286113/93691951-3e9fbc80-fab2-11ea-9993-c1b73c4cc117.png)
