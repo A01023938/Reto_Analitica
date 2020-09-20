@@ -48,3 +48,20 @@ El valor de los centros no tiene una repercusión importante en el funcionamient
 Se grafican los puntos y los centros para una mejor visualización de los datos utilizando la librería matplot.lib. 
 
 ![bd4ef2f1-cf31-42c6-914c-01a36c0c6642](https://user-images.githubusercontent.com/71286113/93649243-24da7880-f9d1-11ea-8ee4-f86b737c8d26.jpg)
+
+# Implementacion KMeans
+
+## Nuestra implementación
+
+Con las funciones propuestas anteriormente procesamos la informacion encontrada en el set the data "iris" y obtuvimos la siguiente grafica.
+
+![Basic Graph](Images\Graph_basic.png)
+
+## Scikit Learn
+Para asegurar que la clasificación de nuestros datos sea la correcta nos dimos la tarea de utilizar la libreria **scikit-learn** para clasificar nuestos datos.
+
+Al igual utilizamos el metodo Kmeans para clasificar nuestros datos en 3 grupos.
+
+Estas fueron la grafica resultante:
+
+![Scikit Learn Graph](Images\Graph_sklearn.png)
