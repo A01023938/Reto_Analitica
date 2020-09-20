@@ -74,11 +74,11 @@ Los centros son puntos representativos ya que reciben la información de la list
 
 El valor de k lo tomamos como el número de clusters que obtuvimos, k se implementa en el algoritmo de k-means para poder completar la función.
 
-El valor de los centros no tiene una repercusión importante en el funcionamiento de las variables y funciones ya que si es más alto o más bajo lo único que hace el centro es tomar esos valores y para definir nuevos puntos y centros sin importar su signo.
+El valor de los centros no tiene una repercusión importante en el funcionamiento de las variables y funciones ya que si es más alto o más bajo lo único que hace el centro es tomar esos valores para definir nuevos puntos y centros sin importar su signo.
 
-En todos los casos cada vez que hay una iteración los números son siempre diferentes y aunque pasen por los mismos métodos y funciones esto siempre va a pasar. Por esta razón en los resultados finales nuestros centros tienen diferentes distancias , la distancia de nuestros centros es de 12.31 , los centros más cercanos son el 2 y 3 y los más lejanos el 3 y el 1.
+En todos los casos cada vez que hay una iteración los números resultantes son siempre diferentes aunque pasen por los mismos métodos y funciones. Por esta razón en los resultados finales nuestros centros tienen diferentes distancias , la distancia de nuestros centros es de 12.31 , los centros más cercanos son el 2 y 3 y los más lejanos el 3 y el 1.
 
-Los centros que se muestran en las gráficas como resultado final se calculan gracias al conjunto de datos ya analizados podemos decir que por eso para llegar a ellos es indispensable primero calcular todas las funciones con sus respectivos datos y métodos.
+Los centros que se muestran en las gráficas como resultado final se calculan gracias al conjunto de datos ya analizados, podemos decir que por eso para llegar a ellos es indispensable primero calcular todas las funciones con sus respectivos datos y métodos.
 
 ## Gráfica
 Se grafican los puntos y los centros para una mejor visualización de los datos utilizando la librería matplot.lib. 
